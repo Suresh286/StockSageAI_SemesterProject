@@ -116,8 +116,8 @@ def apply_theme():
     # For zombie theme, add background image using base64 encoding
     if theme['name'] == 'Zombie Theme':
         try:
-            # Use an existing GIF as background
-            encoded_image = get_base64_of_bin_file("assets/gifs/zombie_header.gif")
+            # Use the root directory GIF as background
+            encoded_image = get_base64_of_bin_file("zombie_header.gif")
             # Add background image
             st.markdown(f"""
                 <style>
@@ -2181,9 +2181,9 @@ def main():
     if st.session_state.get('show_theme_transition', False):
         theme_id = st.session_state.get('pending_theme', st.session_state['current_theme'])
         theme_gif_map = {
-            'zombie': 'assets/gifs/zombie_header.gif',
+            'zombie': 'zombie_header.gif',
             'futuristic': 'https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHhjdGQ1aWlqYmFidm5yeTlpcm94bnVhY3FkeWJxMTVqdm4yNzRpNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lbcLMX9B6sTsGjUmS3/giphy.gif',  # New public futuristic GIF
-            'got': 'assets/gifs/got_header.gif',
+            'got': 'got_header.gif',
             'gaming': 'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3dzejY5cDB0N2VsMXRwdnF4eW4xNjh0ZGxrZzg1Zm84bXA0bTVqcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ul3DvfCRQixLa/giphy.gif',  # Public gaming GIF
         }
         if theme_id in theme_gif_map:
