@@ -1,0 +1,10 @@
+streamlit
+pandas
+numpy
+plotly
+scipy
+scikit-learn
+yfinance
+requests
+base64
+streamlit-lottie==0.0.5 
